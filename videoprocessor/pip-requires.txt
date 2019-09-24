@@ -1,0 +1,5 @@
+flask
+kafka
+numpy
+scikit-video
+yolo34py
