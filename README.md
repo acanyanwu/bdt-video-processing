@@ -2,6 +2,12 @@
 Scalable video processing demo project for BDT MUM class
 
 
+## Group Members
+
+Lamin Saidy (lsaidy@mum.edu)
+Anthony Anyanwu (acanyanwu@mum.edu)
+
+
 ## file structure.
 
 All the scripts which need to run has been specified in the supervisord.conf file.
