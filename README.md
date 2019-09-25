@@ -1,14 +1,16 @@
 # bdt-video-processing
+
 Scalable video processing demo project for BDT MUM class
 
 
 ## Group Members
 
 Lamin Saidy (lsaidy@mum.edu)
+
 Anthony Anyanwu (acanyanwu@mum.edu)
 
 
-## file structure.
+## File structure.
 
 All the scripts which need to run has been specified in the supervisord.conf file.
 
@@ -24,22 +26,22 @@ There are 6 components utilized for this project. The task of corresponding comp
 For clarity, see the same sections below:
 
 
-[program:jupyter]               ; This is responsible for runninng the jupyter notebook
+- [program:jupyter]               ; This is responsible for runninng the jupyter notebook
 
 
-[program:video-spooler]         ; This program monitors the uploads directory and pushes all video found to kafka topic, frame by frame
+- [program:video-spooler]         ; This program monitors the uploads directory and pushes all video found to kafka topic, frame by frame
 
 
-[program:video-app]              ; This is a simple Flask app to allow video upload from user onn browser
+- [program:video-app]              ; This is a simple Flask app to allow video upload from user onn browser
 
 
-[program:plainframe-streamer]    ; This runs the pure java spark stream and stores the results to HBase.
+- [program:plainframe-streamer]    ; This runs the pure java spark stream and stores the results to HBase.
 
 
-[program:rgbsplitter-streamer]    ; Python based spark streamer to which averages each frame's RGB component and stores it to DB 
+- [program:rgbsplitter-streamer]    ; Python based spark streamer to which averages each frame's RGB component and stores it to DB 
 
 
-[program:yolo-streamer]           ; Python based spark streamer which applies Yolo convolutional networks algorithm on each frame and stores the result to HBase 
+- [program:yolo-streamer]           ; Python based spark streamer which applies Yolo convolutional networks algorithm on each frame and stores the result to HBase 
 
 
 ## Project dependencies
